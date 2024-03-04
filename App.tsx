@@ -1,20 +1,26 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import {Text} from './src/components/Text/Text';
+import { SafeAreaView, View } from 'react-native';
+import { Text } from './src/components/Text/Text';
+import { Button } from './src/components/Button/Button';
+import { ThemeProvider } from '@shopify/restyle';
+import { theme } from './src/theme/theme';
 
 function App(): React.JSX.Element {
+
+
   return (
-    <SafeAreaView>
-      <Text preset="headingLarge" bold>
-        Coffstack
-      </Text>
-      <Text preset="headingMedium" italic>
-        Coffstack
-      </Text>
-      <Text preset="headingSmall" semiBold>
-        Coffstack
-      </Text>
-    </SafeAreaView>
+    <ThemeProvider theme={theme}>
+
+      <SafeAreaView>
+        <Text preset="headingLarge" bold>
+          Coffstack
+        </Text>
+
+        <View style={{ margin: 24 }}>
+          <Button title='Entrar' />
+        </View>
+      </SafeAreaView>
+    </ThemeProvider>
   );
 }
 
