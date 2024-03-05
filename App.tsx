@@ -19,7 +19,8 @@ function App(): React.JSX.Element {
           <Box >
             <Button title='Primary' marginBottom='s12' />
             <Button preset='outline' title='Outline' marginBottom='s12' />
-            <Button title='Loading' loading />
+            <Button title='Loading' loading marginBottom='s12' />
+            <Button disabled title='Disabled' />
           </Box>
         </View>
       </SafeAreaView>
