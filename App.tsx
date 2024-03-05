@@ -17,8 +17,9 @@ function App(): React.JSX.Element {
             Coffstack
           </Text>
           <Box >
-            <Button title='Entrar' marginBottom='s12' backgroundColor='buttonPrimary' />
-            <Button title='Entrar' loading backgroundColor='buttonPrimary' />
+            <Button title='Primary' marginBottom='s12' />
+            <Button preset='outline' title='Outline' marginBottom='s12' />
+            <Button title='Loading' loading />
           </Box>
         </View>
       </SafeAreaView>
