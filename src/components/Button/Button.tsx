@@ -1,8 +1,8 @@
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
 import { Text } from '../Text/Text';
-import { TouchableOpacityBox, TouchableOpacityBoxProps } from '../Box/Box';
 import { buttonPresets } from './buttonPresets';
+import { TouchableOpacityBox, TouchableOpacityBoxProps } from '../Box/Box';
+import { ActivityIndicator } from '../ActivityIndicator/ActivityIndicator';
 
 
 export type ButtonPreset = 'primary' | 'outline';
@@ -33,7 +33,7 @@ export function Button({
          {...buttonPreset.container}
          {...touchableOpacityBoxProps}
       >
-         {loading ? (<ActivityIndicator />) :
+         {loading ? (<ActivityIndicator color='carrotSecondary' />) :
             (<Text preset='paragraphMedium' bold color={buttonPreset.content} >{title}</Text>)
          }
       </TouchableOpacityBox >
