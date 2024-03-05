@@ -12,13 +12,15 @@ function App(): React.JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaView>
-        <Text preset="headingLarge" bold>
-          Coffstack
-        </Text>
-        <Box style={{ margin: 24 }}>
-          <Button title='Entrar' marginBottom='s14' backgroundColor='carrotSecondary' />
-          <Button title='Entrar' loading />
-        </Box>
+        <View style={{ paddingHorizontal: 24 }}>
+          <Text preset="headingLarge" bold marginBottom='s16'>
+            Coffstack
+          </Text>
+          <Box >
+            <Button title='Entrar' marginBottom='s12' backgroundColor='buttonPrimary' />
+            <Button title='Entrar' loading backgroundColor='buttonPrimary' />
+          </Box>
+        </View>
       </SafeAreaView>
     </ThemeProvider>
   );
