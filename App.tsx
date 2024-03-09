@@ -12,8 +12,8 @@ function App(): React.JSX.Element {
     <SafeAreaProvider>
       <ThemeProvider theme={theme}>
         <StatusBar backgroundColor='transparent' barStyle={'dark-content'}/>
-        {/* <LoginScreen /> */}
-        <SignUpScreen />
+        <LoginScreen />
+        {/* <SignUpScreen /> */}
       </ThemeProvider>
     </SafeAreaProvider>
   );

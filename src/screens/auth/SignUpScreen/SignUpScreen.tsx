@@ -4,9 +4,9 @@ import { Text } from "../../../components/Text/Text";
 
 import { TextInput } from "../../../components/TextInput/TextInput";
 import { Button } from "../../../components/Button/Button";
-import { Icon } from "../../../components/Icon/Icon";
 
 import { Screen } from "../../../components/Screen/Screen";
+import { PasswordInput } from "../../../components/PasswordInput/PasswordInput";
 export function SignUpScreen() {
 
   function submitForm() {
@@ -39,40 +39,13 @@ export function SignUpScreen() {
         boxProps={{ mb: 's20' }}
       />
 
-      <TextInput
+      <PasswordInput
         label='Senha'
         placeholder='Digite sua senha'
-        RightComponent={<Icon name='eyeOn' color='gray2' />}
         boxProps={{ mb: 's48' }}
       />
 
-      <TextInput
-        label='Senha'
-        placeholder='Digite sua senha'
-        RightComponent={<Icon name='eyeOn' color='gray2' />}
-        boxProps={{ mb: 's48' }}
-      />
-
-      <TextInput
-        label='Senha'
-        placeholder='Digite sua senha'
-        RightComponent={<Icon name='eyeOn' color='gray2' />}
-        boxProps={{ mb: 's48' }}
-      />
-
-      <TextInput
-        label='Senha'
-        placeholder='Digite sua senha'
-        RightComponent={<Icon name='eyeOn' color='gray2' />}
-        boxProps={{ mb: 's48' }}
-      />
-
-      <TextInput
-        label='Senha'
-        placeholder='Digite sua senha'
-        RightComponent={<Icon name='eyeOn' color='gray2' />}
-        boxProps={{ mb: 's48' }}
-      />
+      
 
       <Button
         title="Criar uma conta"

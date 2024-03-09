@@ -6,12 +6,13 @@ import { Text } from "../../../components/Text/Text";
 import { Button } from "../../../components/Button/Button";
 import { TextInput } from "../../../components/TextInput/TextInput";
 import { Screen } from "../../../components/Screen/Screen";
+import { PasswordInput } from "../../../components/PasswordInput/PasswordInput";
 
 
 
 export function LoginScreen() {
   return (
-    <Screen>
+    <Screen scrollable>
       <Text preset="headingLarge" bold marginBottom='s8'>
         Coffstack
       </Text>
@@ -24,11 +25,10 @@ export function LoginScreen() {
         placeholder='Digite seu e-mail'
         boxProps={{ marginBottom: 's20' }}
       />
-      <TextInput
+      <PasswordInput
         label='Senha'
         placeholder='Digite sua senha'
-        RightComponent={<Icon name='eyeOn' color='gray2' />}
-        boxProps={{ marginTop: 's10' }}
+        boxProps={{ mb: 's10' }}
       />
       <Text
         preset='paragraphSmall'

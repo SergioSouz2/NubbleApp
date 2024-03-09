@@ -1,7 +1,5 @@
-import { useTheme } from "@shopify/restyle";
 import React from "react";
 import { ScrollView, View } from "react-native";
-import { useAppTheme } from "../../../hooks/useAppTheme";
 
 interface Props {
   children: React.ReactNode;
@@ -9,18 +7,23 @@ interface Props {
 }
 
 
-export function ScrollViewContainer({children, backgroundColor}: Props){
+export function ScrollViewContainer({ children, backgroundColor }: Props) {
 
-  return(
-    <ScrollView style={{backgroundColor}} >
+  return (
+    <ScrollView
+      keyboardShouldPersistTaps='handled'
+      style={{ backgroundColor, flex: 1, }}
+    >
       {children}
     </ScrollView>
   )
 }
 
-export function ViewContainer({children,backgroundColor}: Props){
-  return(
-    <View style={{backgroundColor}}>
+export function ViewContainer({ children, backgroundColor }: Props) {
+  return (
+    <View
+      style={{ backgroundColor }}
+    >
       {children}
     </View>
   )
