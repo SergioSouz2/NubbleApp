@@ -2,16 +2,16 @@ import React, { useRef } from "react"
 import { Pressable, TextInput as RNTextInput, TextInputProps as RNTextInputProps, TextStyle } from 'react-native';
 import { Box, BoxProps } from "../Box/Box";
 import { $fontFamily, $fontSizes, Text } from "../Text/Text";
-import { Icon } from "../Icon/Icon";
 import { useAppTheme } from "../../hooks/useAppTheme";
 
 interface TextInputProps extends RNTextInputProps {
   label: string;
   errorMessage?: string;
   RightComponent?: React.ReactElement;
+  boxProps?: BoxProps;
 }
 
-export function TextInput({ label, RightComponent, errorMessage, ...textInputProps }: TextInputProps) {
+export function TextInput({ label, RightComponent,boxProps, errorMessage, ...textInputProps }: TextInputProps) {
   const { colors } = useAppTheme();
   const inputRef = useRef<RNTextInput>(null)
 
@@ -27,8 +27,8 @@ export function TextInput({ label, RightComponent, errorMessage, ...textInputPro
     inputRef.current?.focus()
   }
   return (
-    <Pressable onPress={focusInput}>
-      <Box >
+    <Box {...boxProps}>
+      <Pressable onPress={focusInput}>
         <Text
           preset="paragraphMedium"
           marginBottom="s4">{label}
@@ -51,8 +51,8 @@ export function TextInput({ label, RightComponent, errorMessage, ...textInputPro
             <Text preset="paragraphSmall" color="error" bold>{errorMessage}</Text>
           )
         }
-      </Box>
-    </Pressable>
+      </Pressable>
+    </Box>
 
 
   )
