@@ -6,5 +6,6 @@ export function useAppSafeArea() {
   const { spacing } = useAppTheme()
   return {
     top: Math.max(top, spacing.s24),
+    bottom: Math.max(top, spacing.s24),
   }
 }
