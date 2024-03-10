@@ -7,7 +7,13 @@ import { Button } from "../../../components/Button/Button";
 
 import { Screen } from "../../../components/Screen/Screen";
 import { PasswordInput } from "../../../components/PasswordInput/PasswordInput";
-export function SignUpScreen() {
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../../routes/Routes";
+
+
+type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUpScreen'> 
+
+export function SignUpScreen(props:ScreenProps) {
 
   function submitForm() {
     //TODO: Implementar
@@ -15,7 +21,7 @@ export function SignUpScreen() {
 
   return (
     <Screen canGoBack scrollable>
-      <Text
+      <Text 
         preset="headingLarge"
         marginBottom="s32"
       >
