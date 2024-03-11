@@ -9,10 +9,11 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SucessScreen'> 
 
-export function SucessScreen({route}: ScreenProps){
+export function SucessScreen({route, navigation}: ScreenProps){
 
   function goBackToBegin(){
     // TODO: reset 
+    navigation.goBack()
   }
   return(
     <Screen>
