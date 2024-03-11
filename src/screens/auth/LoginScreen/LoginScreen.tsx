@@ -17,6 +17,10 @@ export function LoginScreen({ navigation }:ScreenProps) {
     navigation.navigate('SignUpScreen')
   }
 
+  function navigateToForgotPassword(){
+    navigation.navigate('ForgotPasswordScreen')
+  }
+
 
   return (
     <Screen scrollable>
@@ -41,6 +45,7 @@ export function LoginScreen({ navigation }:ScreenProps) {
         preset='paragraphSmall'
         color='primary'
         bold
+        onPress={navigateToForgotPassword}
       >
         Esqueci minha senha
       </Text>

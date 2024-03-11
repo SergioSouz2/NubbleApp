@@ -5,10 +5,12 @@ import { LoginScreen } from "../screens/auth/LoginScreen/LoginScreen";
 import { SignUpScreen } from "../screens/auth/SignUpScreen/SignUpScreen";
 import { SucessScreen } from "../screens/auth/SucessScreen/SucessScreen";
 import { IconProps } from "../components/Icon/Icon";
+import { ForgotPasswordScreen } from "../screens/auth/ForgotPasswordScreen/ForgotPasswordScreen";
 
 export type RootStackParamList  = {
   LoginScreen: undefined;
   SignUpScreen: undefined;
+  ForgotPasswordScreen: undefined;
   SucessScreen: {
     title: string;
     description: string;
@@ -28,6 +30,7 @@ export function Routes() {
         <Stack.Screen name="LoginScreen" component={LoginScreen}/>
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
         <Stack.Screen name="SucessScreen" component={SucessScreen} />
+        <Stack.Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
