@@ -11,7 +11,7 @@ export interface TextInputProps extends RNTextInputProps {
   boxProps?: BoxProps;
 }
 
-export function TextInput({ label, RightComponent,boxProps, errorMessage, ...textInputProps }: TextInputProps) {
+export function TextInput({ label, RightComponent, boxProps, errorMessage, ...textInputProps }: TextInputProps) {
   const { colors } = useAppTheme();
   const inputRef = useRef<RNTextInput>(null)
 
@@ -35,6 +35,7 @@ export function TextInput({ label, RightComponent,boxProps, errorMessage, ...tex
         </Text>
         <Box {...$textInputContainer}>
           <RNTextInput
+            autoCapitalize="none"
             ref={inputRef}
             placeholderTextColor={colors.gray2}
             style={$textInputStyle}
