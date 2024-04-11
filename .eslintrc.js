@@ -1,7 +1,10 @@
 module.exports = {
   root: true,
-  extends: '@react-native',
-  plugins: ['import'],
+  extends: [
+    '@react-native-community',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
+  ],
+  plugins: ['import', '@tanstack/query'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -35,6 +38,7 @@ module.exports = {
             'newlines-between': 'always',
           },
         ],
+        'react-native/no-inline-styles': 'off',
       },
     },
   ],
