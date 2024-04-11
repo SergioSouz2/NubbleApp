@@ -1,19 +1,14 @@
-import React, { useState } from "react";
-import { 
-  Icon, 
-  TextInput, 
-  TextInputProps 
-} from "@components";
+import React, {useState} from 'react';
 
-export type PasswordInputProps = Omit<TextInputProps, 'RightComponent'> 
+import {Icon, TextInput, TextInputProps} from '@components';
+
+export type PasswordInputProps = Omit<TextInputProps, 'RightComponent'>;
 
 export function PasswordInput(props: PasswordInputProps) {
-
-  const [isSecuteTextEntry, setSecuteTextEntry] = useState(true)
+  const [isSecuteTextEntry, setSecuteTextEntry] = useState(true);
 
   function toggleSecureTextEntry() {
-    setSecuteTextEntry(prev => !prev)
-
+    setSecuteTextEntry(prev => !prev);
   }
 
   return (
@@ -23,10 +18,10 @@ export function PasswordInput(props: PasswordInputProps) {
       RightComponent={
         <Icon
           name={isSecuteTextEntry ? 'eyeOn' : 'eyeOff'}
-          color='gray2'
+          color="gray2"
           onPress={toggleSecureTextEntry}
         />
       }
     />
-  )
+  );
 }
