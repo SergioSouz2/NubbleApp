@@ -1,15 +1,18 @@
 import React from "react";
-import { Screen } from "../../../components/Screen/Screen";
-import { Text } from "../../../components/Text/Text";
-import { TextInput } from "../../../components/TextInput/TextInput";
-import { Button } from "../../../components/Button/Button";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../../../routes/Routes";
-import { useResetNavigationSucess } from "../../../hooks/useResetNavigationSucess";
-import { FormTextInput } from "../../../components/Form/FormTextInput";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { ForgotPasswordSchema, forgotPasswordSchema } from "./ForgotPasswordSchema";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
+import { RootStackParamList } from "@routes";
+import { useResetNavigationSucess } from "@hooks";
+
+import { ForgotPasswordSchema, forgotPasswordSchema } from "./forgotPasswordSchema";
+import {
+    Text,
+    Button,
+    Screen,
+    FormTextInput
+} from '@components'
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'ForgotPasswordScreen'>
 

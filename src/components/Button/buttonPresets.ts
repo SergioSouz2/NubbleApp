@@ -1,6 +1,8 @@
-import {ThemeColors} from '../../theme/theme';
-import {TouchableOpacityBoxProps} from '../Box/Box';
-import {ButtonPreset} from './Button';
+import {ThemeColors} from '@theme';
+import {
+  TouchableOpacityBoxProps,
+  ButtonPreset,
+} from '@components';
 
 interface ButtonUI {
   container: TouchableOpacityBoxProps;
