@@ -1,5 +1,11 @@
+import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
+import {CompositeScreenProps} from '@react-navigation/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {AppStackParamsList, AuthStackParamList} from '@routes';
+import {
+  AppStackParamsList,
+  AppTabBottomTabParamsList,
+  AuthStackParamList,
+} from '@routes';
 
 declare global {
   namespace ReactNavigation {
@@ -12,3 +18,10 @@ export type AppScreenProps<RoutaName extends keyof AppStackParamsList> =
 
 export type AuthScreenProps<RoutaName extends keyof AuthStackParamList> =
   NativeStackScreenProps<AuthStackParamList, RoutaName>;
+
+export type AppTabScreenProps<
+  RoutaName extends keyof AppTabBottomTabParamsList,
+> = CompositeScreenProps<
+  BottomTabScreenProps<AppTabBottomTabParamsList, RoutaName>,
+  NativeStackScreenProps<AppStackParamsList, 'AppTabNavigator'>
+>;
