@@ -7,6 +7,8 @@ import { AppTabScreenProps } from '@routes';
 
 import { Post, postService } from '@domain';
 
+import { HomeHeader } from './components/HomeHeader';
+
 export function HomeScreen({ navigation }: AppTabScreenProps<'HomeScreen'>) {
    const [postList, setPostList] = useState<Post[]>([]);
 
@@ -20,11 +22,13 @@ export function HomeScreen({ navigation }: AppTabScreenProps<'HomeScreen'>) {
 
    return (
       <Screen style={$screen}>
+
          <FlatList
             showsVerticalScrollIndicator={false}
             data={postList}
             keyExtractor={item => item.id}
             renderItem={renderItem}
+            ListHeaderComponent={<HomeHeader />}
          />
       </Screen>
    );
