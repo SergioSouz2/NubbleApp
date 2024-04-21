@@ -1,17 +1,18 @@
 import React from 'react';
-import {Post} from '@domain';
-import {Box} from '@components';
-import {PostHeader} from './components/PostHeader';
-import {PostImage} from './components/PostImage';
-import {PostActions} from './components/PostActions';
+import { Post } from '@domain';
+import { Box } from '@components';
+import { PostHeader } from './components/PostHeader';
+import { PostImage } from './components/PostImage';
+import { PostActions } from './components/PostActions';
+import { PostBottom } from './components/PostBottom';
 
 interface Props {
    post: Post;
 }
 
-export function PostItem({post}: Props) {
+export function PostItem({ post }: Props) {
    return (
-      <Box marginBottom="s24">
+      <Box marginBottom="s24" paddingHorizontal="s24" >
          <PostHeader author={post.author} />
          <PostImage imageURL={post.imageURL} />
          <PostActions
@@ -19,6 +20,7 @@ export function PostItem({post}: Props) {
             favoriteCount={post.favoriteCount}
             reactionCount={post.reactionCount}
          />
+         <PostBottom author={post.author} text={post.text} commentCount={post.commentCount} />
       </Box>
    );
 }
