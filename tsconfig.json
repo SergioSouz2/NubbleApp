@@ -23,6 +23,9 @@
          ],
          "@brand": [
             "src/brand"
+         ],
+         "@api": [
+            "src/api"
          ]
       }
    }
