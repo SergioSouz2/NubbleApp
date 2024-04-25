@@ -39,3 +39,8 @@ export interface PostAPI {
       comments_count: string;
    },
 }
+
+export interface PageParams {
+   page?: number;
+   per_page?: number;
+}
